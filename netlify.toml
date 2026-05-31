@@ -1,0 +1,68 @@
+[build]
+  publish = "."
+
+# ── CABEÇALHOS HTTP ──────────────────────────────────────────────────────────
+# Aplicados a todos os arquivos
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Segurança
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+    # Cache padrão para HTML — sem cache para sempre ter versão atualizada
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Fontes e assets externos — cache longo
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# ── REDIRECTS ─────────────────────────────────────────────────────────────────
+# Força HTTPS e www → sem www (já feito pelo Netlify, mas reforça)
+[[redirects]]
+  from = "http://hulk.investidorbot.com/*"
+  to   = "https://hulk.investidorbot.com/:splat"
+  status = 301
+  force  = true
+
+# Trailing slash → sem trailing slash (evita conteúdo duplicado)
+[[redirects]]
+  from = "/index.html"
+  to   = "/"
+  status = 301
+
+# Catch-all: qualquer URL desconhecida volta para a landing
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200

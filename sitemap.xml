@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://hulk.investidorbot.com/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hulk.investidorbot.com/og-hulk.jpg</image:loc>
+      <image:title>Robô Hulk – Robô Trader Mini Índice WIN Automático MT5</image:title>
+      <image:caption>Robô trader 100% automático para Mini Índice WIN via MetaTrader 5. Licença vitalícia R$997.</image:caption>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/9PMgHQooQFA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Robô Hulk operando ao vivo no Mini Índice WIN – Robô Trader Automático MT5</video:title>
+      <video:description>Assista o Robô Hulk executando operações reais no Mini Índice WIN de forma 100% automática via MetaTrader 5. Capital inicial R$5.000, +252 dias operados.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/9PMgHQooQFA</video:player_loc>
+      <video:duration>300</video:duration>
+      <video:publication_date>2026-05-23T00:00:00+00:00</video:publication_date>
+      <video:tag>robô trader</video:tag>
+      <video:tag>mini índice WIN</video:tag>
+      <video:tag>MetaTrader 5</video:tag>
+      <video:tag>trade automático</video:tag>
+    </video:video>
+  </url>
+</urlset>
